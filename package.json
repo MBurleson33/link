@@ -1,0 +1,7 @@
+{
+  "name": "shortlinks",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Personal URL shortener with custom slugs — Vercel + Upstash Redis"
+}

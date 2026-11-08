@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Link not found</title>
+<style>
+  html, body { margin: 0; height: 100%; background: #0f1115; color: #e8eaf0;
+    font: 16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, sans-serif; }
+  main { min-height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center;
+    text-align: center; padding: 24px; box-sizing: border-box; }
+  .icon { font-size: 54px; margin-bottom: 8px; }
+  h1 { font-size: 24px; margin: 0 0 8px; }
+  p { color: #8b93a7; margin: 0; max-width: 360px; }
+  code { color: #5b8cff; }
+</style>
+</head>
+<body>
+<main>
+  <div class="icon">🔗</div>
+  <h1>This link doesn’t exist</h1>
+  <p id="msg">It may have been mistyped or removed.</p>
+</main>
+<script>
+  const s = new URLSearchParams(location.search).get('s');
+  if (s) {
+    const msg = document.getElementById('msg');
+    msg.textContent = '';
+    msg.append('The short link ');
+    const c = document.createElement('code'); c.textContent = '/' + s; msg.append(c);
+    msg.append(' may have been mistyped or removed.');
+  }
+</script>
+</body>
+</html>
