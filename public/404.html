@@ -4,7 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
-<title>Link not found</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%235b8cff'/><text x='32' y='43' font-family='Arial,Helvetica,sans-serif' font-size='30' font-weight='800' fill='white' text-anchor='middle'>33</text></svg>">
+<title>Link not found · link33</title>
 <style>
   html, body { margin: 0; height: 100%; background: #0f1115; color: #e8eaf0;
     font: 16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, sans-serif; }
@@ -14,13 +15,18 @@
   h1 { font-size: 24px; margin: 0 0 8px; }
   p { color: #8b93a7; margin: 0; max-width: 360px; }
   code { color: #5b8cff; }
+  .mark { width: 56px; height: 56px; border-radius: 14px; background: #5b8cff; color: #fff; display: flex;
+    align-items: center; justify-content: center; font-size: 24px; font-weight: 800; margin-bottom: 16px; }
+  .foot { margin-top: 28px; font-size: 14px; font-weight: 800; letter-spacing: -.02em; color: #e8eaf0; }
+  .foot b { color: #5b8cff; }
 </style>
 </head>
 <body>
 <main>
-  <div class="icon">🔗</div>
+  <div class="mark">33</div>
   <h1>This link doesn’t exist</h1>
   <p id="msg">It may have been mistyped or removed.</p>
+  <div class="foot">link<b>33</b></div>
 </main>
 <script>
   const s = new URLSearchParams(location.search).get('s');
