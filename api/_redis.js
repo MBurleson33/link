@@ -1,7 +1,13 @@
 // Tiny Upstash Redis REST client — plain fetch, no dependencies.
 // Works with the env vars Vercel's Upstash integration creates.
-const URL_ = process.env.KV_REST_API_URL || process.env.UPSTASH_REDIS_REST_URL;
-const TOKEN = process.env.KV_REST_API_TOKEN || process.env.UPSTASH_REDIS_REST_TOKEN;
+// Also finds them under any custom prefix (e.g. STORAGE_REST_API_URL).
+const env = process.env;
+const findEnv = (suffix) => {
+  const key = Object.keys(env).find((k) => k.endsWith(suffix) && !k.includes('READ_ONLY'));
+  return key ? env[key] : undefined;
+};
+const URL_ = env.KV_REST_API_URL || env.UPSTASH_REDIS_REST_URL || findEnv('_REST_API_URL') || findEnv('_REDIS_REST_URL');
+const TOKEN = env.KV_REST_API_TOKEN || env.UPSTASH_REDIS_REST_TOKEN || findEnv('_REST_API_TOKEN') || findEnv('_REDIS_REST_TOKEN');
 
 function assertConfig() {
   if (!URL_ || !TOKEN) {
