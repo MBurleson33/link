@@ -50,6 +50,7 @@
     font-weight: 800; letter-spacing: -.045em;
     font-variation-settings: "opsz" 96, "wdth" 75;
   }
+  .mark .word .l { margin-right: .045em; } /* give the l some room before the i */
   .mark .coin {
     display: inline-grid; place-items: center; min-width: 1.02em; height: 1.02em; padding: 0 .1em; border-radius: 999px;
     background: var(--cream); color: var(--graphite); font-weight: 800; font-size: .54em;
@@ -243,7 +244,7 @@
 
 <!-- Login -->
 <main id="loginView" class="login hidden">
-  <span class="mark" aria-label="link33"><span class="word">link</span><span class="coin">33</span></span>
+  <span class="mark" aria-label="link33"><span class="word"><span class="l">l</span>ink</span><span class="coin">33</span></span>
   <p>Matt’s short links.</p>
   <form id="loginForm">
     <label for="pw" class="hidden">Password</label>
@@ -256,7 +257,7 @@
 <!-- App -->
 <div id="appView" class="wrap hidden">
   <div class="topbar">
-    <span class="mark" aria-label="link33"><span class="word">link</span><span class="coin">33</span></span>
+    <span class="mark" aria-label="link33"><span class="word"><span class="l">l</span>ink</span><span class="coin">33</span></span>
     <button class="lock" id="logoutBtn">Lock</button>
   </div>
 
