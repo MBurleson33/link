@@ -31,7 +31,7 @@
   code { font-family: inherit; color: var(--paper); font-weight: 700; word-break: break-all; }
   .mark { font-family: "Bricolage Grotesque", sans-serif; margin-top: 48px; display: inline-flex; align-items: center; gap: .18em; font-size: 30px; line-height: 1; }
   .mark .word { font-weight: 800; letter-spacing: -.045em; font-variation-settings: "opsz" 96, "wdth" 75; }
-  .mark .word .l { margin-right: .045em; } /* room after the l and the i */
+  .mark .word .l { margin-right: .045em; } /* even space between every letter */
   .mark .coin { display: inline-grid; place-items: center; min-width: 1.02em; height: 1.02em; padding: 0 .1em; border-radius: 999px;
     background: var(--signal); color: var(--ink); font-weight: 800; font-size: .54em; letter-spacing: -.06em;
     font-variation-settings: "opsz" 96, "wdth" 75; }
@@ -42,7 +42,7 @@
   <div class="torn" aria-hidden="true"><div class="half l"><span class="hole"></span></div><div class="half r"></div></div>
   <h1>This link doesn’t go anywhere</h1>
   <p id="msg">It may have been typed wrong or removed. Ask whoever sent it for a fresh one.</p>
-  <span class="mark" aria-label="link33"><span class="word"><span class="l">l</span><span class="l">i</span>nk</span><span class="coin">33</span></span>
+  <span class="mark" aria-label="link33"><span class="word"><span class="l">l</span><span class="l">i</span><span class="l">n</span>k</span><span class="coin">33</span></span>
 </main>
 <script>
   const s = new URLSearchParams(location.search).get('s');
